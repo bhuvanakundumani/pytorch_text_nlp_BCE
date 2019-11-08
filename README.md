@@ -4,8 +4,8 @@ https://drive.google.com/file/d/1iCxHFV6Y383pIFt6on8a0ygRRhO0oipH/view?usp=shari
 Original dataset can be downloaded from - http://ai.stanford.edu/~amaas/data/sentiment/
 
 
-data_exp.py - For identifying the max length of the sentence.
-data_prep.py - Loads the dataset and splits into train and test set.
-preprocess.py - Tokenize and apply GloVe embedding on the dataset.
-models/ - model files.
-main.py - model training and evaluation.
+* data_exp.py - For identifying the max length of the sentence.
+* data_prep.py - Loads the dataset and splits into train and test set.
+* preprocess.py - Tokenize and apply GloVe embedding on the dataset.
+* models/ - model files.
+* main.py - model training and evaluation.
