@@ -9,3 +9,6 @@ Original dataset can be downloaded from - http://ai.stanford.edu/~amaas/data/sen
 * preprocess.py - Tokenize and apply GloVe embedding on the dataset.
 * models/ - model files.
 * main.py - model training and evaluation.
+
+LSTM Parameters ( Batch size = 512, epochs = 4  for Test accuracy = 0.804)
+LSTM with Attention Parameters ( Batch size = 512, epochs = 4 for Test accuracy = 0.704)

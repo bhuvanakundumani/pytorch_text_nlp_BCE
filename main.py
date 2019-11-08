@@ -4,7 +4,8 @@ import torch
 import torchtext
 import nltk
 from tqdm import tqdm
-from models.LSTM import LstmClassifier
+from models.BCELogits.LSTM import LstmClassifier
+from models.BCELogits.LSTM_Attn import LstmAttentionModel
 from preprocess import preproc_load
 from sklearn.metrics import accuracy_score
 import torch.nn as nn
@@ -23,7 +24,8 @@ output_size = 1
 hidden_size = 100
 embedding_length = 100
 batch_size = 512
-model = LstmClassifier(batch_size, output_size, hidden_size, data_dict["vocab_size"], embedding_length, data_dict["pretrained_embeddings"])
+#model = LstmClassifier(batch_size, output_size, hidden_size, data_dict["vocab_size"], embedding_length, data_dict["pretrained_embeddings"])
+model = LstmAttentionModel(batch_size, output_size, hidden_size, data_dict["vocab_size"], embedding_length, data_dict["pretrained_embeddings"])
 optimizer = torch.optim.Adam(model.parameters(), lr)
 loss_function = torch.nn.BCEWithLogitsLoss(reduction='mean')
 
